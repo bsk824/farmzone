@@ -51,3 +51,122 @@ button {
 	> span {position: relative;}
 }
 pre {white-space: pre-line;}
+
+
+.cal_body {
+  width: 960px;
+  margin: 0 auto;
+  border: {
+    width: 1px 0 0 1px;
+    style: solid;
+    color: #f1f2f2;
+  }
+  user-select: none;
+  .item {
+    position: relative;
+    border: {
+      width: 0 1px 1px 0;
+      style: solid;
+      color: #f1f2f2;
+    }
+    box-sizing: border-box;
+  }
+  &_day {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &_day .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14.2%;
+    height: 45px;
+    font-size: 15px;
+    color: rgba(127, 127, 127, 0.55);
+  }
+  &_day .sun {width: 14.8%;}
+  &_date {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &_date .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 14.2%; min-height: 122px;
+    padding: 30px 6px 0;
+  }
+  &_date .sun {width: 14.8%;}
+  &_date .date {
+    position: absolute;
+    top: 4px; left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; height: 30px;
+    font-size: 15px;
+    border-radius: 10px;
+    color: #646464;
+  }
+  &_date .today .date {
+    color: #fff;
+    background: #5f63d3;
+    font-weight: bold;
+  }
+  .reg_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; height: 28px;
+    padding: 0 4px 0 8px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    &.isDragging {
+      position: fixed;
+      cursor: grabbing;
+      z-index: 10;
+    }
+    select {
+      width: 51px; height: 22px;
+      color: #3a3a3a;
+      border-color: #e6ebec;
+      padding: 0 7px;
+      line-height: 1.2;
+    }
+    &:nth-of-type(1) {
+      background: #edeaff;
+      color: #6856cc;
+    }
+    &:nth-of-type(2) {
+      background: #ffe3fa;
+      color: #c33370;
+    }
+    &:nth-of-type(3) {
+      background: #c9f3f3;
+      color: #1c9b9b;
+    }
+  }
+  .reg_items ~ .reg_items { margin-top: 2px; }
+}
+
+
+.detail_box {
+  display: none;
+  position: fixed;
+  top: 0; left: -100vh;
+  z-index: 100;
+  background: #fff;
+  width: 355px; height: 361px;
+  border: solid 2px #ececec;
+  box-shadow: -2.6px 1.5px 15px 0 rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  &.isShow {display: block;}
+  &_tit {
+    font: {
+      size: 21px;
+      weight: bold;
+    }
+    border-bottom: 2px solid #ececec;
+  }
+}

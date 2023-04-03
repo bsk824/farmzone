@@ -87,4 +87,132 @@ button > span {
 pre {
   white-space: pre-line;
 }
+
+.cal_body {
+  width: 960px;
+  margin: 0 auto;
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: #f1f2f2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.cal_body .item {
+  position: relative;
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: #f1f2f2;
+  box-sizing: border-box;
+}
+.cal_body_day {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cal_body_day .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14.2%;
+  height: 45px;
+  font-size: 15px;
+  color: rgba(127, 127, 127, 0.55);
+}
+.cal_body_day .sun {
+  width: 14.8%;
+}
+.cal_body_date {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cal_body_date .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 14.2%;
+  min-height: 122px;
+  padding: 30px 6px 0;
+}
+.cal_body_date .sun {
+  width: 14.8%;
+}
+.cal_body_date .date {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 10px;
+  color: #646464;
+}
+.cal_body_date .today .date {
+  color: #fff;
+  background: #5f63d3;
+  font-weight: bold;
+}
+.cal_body .reg_items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 28px;
+  padding: 0 4px 0 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.cal_body .reg_items.isDragging {
+  position: fixed;
+  cursor: grabbing;
+  z-index: 10;
+}
+.cal_body .reg_items select {
+  width: 51px;
+  height: 22px;
+  color: #3a3a3a;
+  border-color: #e6ebec;
+  padding: 0 7px;
+  line-height: 1.2;
+}
+.cal_body .reg_items:nth-of-type(1) {
+  background: #edeaff;
+  color: #6856cc;
+}
+.cal_body .reg_items:nth-of-type(2) {
+  background: #ffe3fa;
+  color: #c33370;
+}
+.cal_body .reg_items:nth-of-type(3) {
+  background: #c9f3f3;
+  color: #1c9b9b;
+}
+.cal_body .reg_items ~ .reg_items {
+  margin-top: 2px;
+}
+
+.detail_box {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: -100vh;
+  z-index: 100;
+  background: #fff;
+  width: 355px;
+  height: 361px;
+  border: solid 2px #ececec;
+  box-shadow: -2.6px 1.5px 15px 0 rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+.detail_box.isShow {
+  display: block;
+}
+.detail_box_tit {
+  font-size: 21px;
+  font-weight: bold;
+  border-bottom: 2px solid #ececec;
+}
 /*# sourceMappingURL=style.css.map */
