@@ -79,6 +79,7 @@ class DragItem {
         delta.x = e.pageX;
         delta.y = e.pageY;
         delta.target.classList.add('isDragging');
+        this.detailBox.classList.remove('isShow');
       }, 100);
       window.addEventListener('mousemove', mov);
       window.addEventListener('mouseup', movEnd);
