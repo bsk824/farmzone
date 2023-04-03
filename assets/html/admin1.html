@@ -11,27 +11,15 @@
   <script src="/js/ui.js"></script>
 </head>
 <body>
-  <table>
-    <tr>
-      <th>로그인</th>
-      <td><a href="login.html">login.html</a></td>
-    </tr>
-    <tr>
-      <th>시험</th>
-      <td><a href="page1.html">page1.html</a></td>
-    </tr>
-    <tr>
-      <th>시험신청</th>
-      <td><a href="page2.html">page2.html</a></td>
-    </tr>
-    <tr>
-      <th>가견적</th>
-      <td><a href="page3.html">page3.html</a></td>
-    </tr>
-    <tr>
-      <th>어드민</th>
-      <td><a href="admin1.html">admin1.html</a></td>
-    </tr>
-  </table>
+  <div class="admin_wrap">
+
+@@include('./admin_header.html', {name: "사용자 관리"})
+
+    <div class="admin_container">
+      
+@@include('./admin_footer.html')
+    </div>
+
+  </div>
 </body>
 </html>

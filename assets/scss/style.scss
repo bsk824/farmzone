@@ -57,6 +57,27 @@ button {
 }
 pre {white-space: pre-line;}
 
+.admin {
+  &_snb {
+    position: fixed;
+    top: 0; bottom: 0; left: 0;
+    width: 130px;
+    background: #24262c;
+  }
+  &_ci {
+    position: relative;
+    height: 144px;
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0; bottom: 0; left :0;
+      border-bottom: 1px solid #fff;
+      opacity: .11;
+    }
+  }
+}
+
+
 .wrap {
   display: flex;
   flex-direction: column;
