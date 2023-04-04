@@ -49,7 +49,6 @@ table {
   width: 100%;
   border-collapse: collapse;
   border: 0;
-  table-layout: fixed;
 }
 
 fieldset, img {
@@ -94,17 +93,40 @@ pre {
   white-space: pre-line;
 }
 
+.admin_wrap {
+  min-width: 1100px;
+}
+.admin_header_top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 130px;
+  z-index: 10;
+  padding: 0 30px;
+  height: 103px;
+  background: #fff;
+  border-bottom: 1px solid #24262c;
+}
+.admin_title {
+  padding-top: 45px;
+  color: #4a4a4a;
+  font-size: 24px;
+}
 .admin_snb {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
+  z-index: 20;
   width: 130px;
   background: #24262c;
 }
 .admin_ci {
   position: relative;
-  height: 144px;
+  padding-top: 45px;
+  height: 103px;
+  box-sizing: border-box;
+  text-align: center;
 }
 .admin_ci:after {
   content: "";
@@ -114,6 +136,262 @@ pre {
   left: 0;
   border-bottom: 1px solid #fff;
   opacity: 0.11;
+}
+.admin_nav {
+  margin: 22px 0;
+}
+.admin_nav_item a {
+  display: block;
+  padding: 14px 29px 14px 0;
+  text-align: right;
+  color: #fff;
+  font-size: 16px;
+}
+.admin_nav_item_active {
+  background: #005fae;
+}
+.admin_footer {
+  padding-bottom: 58px;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(72, 72, 72, 0.3);
+}
+.admin_container {
+  margin-left: 130px;
+  padding: 103px 30px 80px;
+}
+.admin_paging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 55px 0 0 -130px;
+}
+.admin_paging .btn_nav {
+  position: relative;
+  width: 14px;
+  height: 30px;
+  font-size: 0;
+  margin: 0 4px;
+  overflow: hidden;
+}
+.admin_paging .btn_nav:before, .admin_paging .btn_nav:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -5px;
+  width: 10px;
+  height: 10px;
+  border: solid #005fae;
+  border-width: 2px 2px 0 0;
+  box-sizing: border-box;
+}
+.admin_paging .btn_nav_start:before, .admin_paging .btn_nav_start:after, .admin_paging .btn_nav_prev:before, .admin_paging .btn_nav_prev:after {
+  transform: rotate(-135deg);
+}
+.admin_paging .btn_nav_start:before {
+  margin-left: 0;
+}
+.admin_paging .btn_nav_next:before, .admin_paging .btn_nav_next:after, .admin_paging .btn_nav_end:before, .admin_paging .btn_nav_end:after {
+  transform: rotate(45deg);
+}
+.admin_paging .btn_nav_end:before {
+  margin-left: -10px;
+}
+.admin_paging .btn_nav_prev:before, .admin_paging .btn_nav_next:before {
+  display: none;
+}
+.admin_paging .btn_nav:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.admin_paging_number {
+  display: flex;
+  margin: 0 5px;
+}
+.admin_paging_number button {
+  min-width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+}
+.admin_paging_number button:disabled {
+  color: #005fae;
+  cursor: default;
+}
+.admin_paging_number button ~ button {
+  margin-left: 5px;
+}
+.admin_page_title {
+  margin: 38px 0 32px;
+  font-size: 24px;
+  line-height: 1;
+  color: #005fae;
+}
+.admin_search {
+  display: flex;
+  padding: 18px 32px;
+  align-items: center;
+  background: #f9f9f9;
+}
+.admin_search .search_column ~ .search_column {
+  margin-left: -1px;
+}
+.admin_search select {
+  width: 185px;
+  height: 34px;
+  padding: 0 22px;
+  background: #fff url("../images/icon/icon_select.png") no-repeat right 12px top 50%;
+  border: 1px solid #cdd8db;
+  color: #4a4a4a;
+}
+.admin_search input[type=text] {
+  width: 330px;
+  height: 34px;
+  padding: 0 22px;
+  border: 1px solid #cdd8db;
+}
+.admin_search .btn_admin {
+  width: 70px;
+  height: 34px;
+}
+.admin_table_header {
+  width: 100%;
+  margin: 32px 0 9px;
+}
+.admin_table_header .pos_right {
+  float: right;
+}
+.admin_table_header .btn_admin {
+  padding: 0 32px;
+}
+.admin_table_header:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.admin_table_list {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.admin_table_list::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+.admin_table_list::-webkit-scrollbar-thumb {
+  background: #e9e9e9;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+.admin_table_list::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4a;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.admin_table_list::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+.admin_table_list table {
+  min-width: 1100px;
+  text-align: center;
+}
+.admin_table_list table .left {
+  text-align: left;
+}
+.admin_table_list table .right {
+  text-align: right;
+}
+.admin_table_list thead th {
+  position: relative;
+  padding: 0 5px;
+  height: 56px;
+  background: #2385d7;
+  white-space: nowrap;
+  font-size: 13px;
+  line-height: 1.23;
+  font-weight: 400;
+  color: #fff;
+  border-bottom: 1px solid #24262c;
+}
+.admin_table_list thead th:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 16px;
+  border-left: 1px solid #fff;
+  opacity: 0.28;
+  transform: translateY(-50%);
+}
+.admin_table_list thead th:first-child:before {
+  display: none;
+}
+.admin_table_list tbody td {
+  height: 46px;
+  padding: 0 5px;
+  background: #f9fafc;
+  font-size: 13px;
+  color: #4a4a4a;
+  white-space: nowrap;
+  border-bottom: 1px solid #e9e9e9;
+}
+.admin_table_list tbody td.elips {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.admin_table_list tbody td .btn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.admin_table_list tbody tr:nth-of-type(2n) td {
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+.admin_table_list .btn_del {
+  width: 32px;
+  height: 19px;
+  font-size: 12px;
+  background: #8f929a;
+  color: #fff;
+}
+.admin_table_list .btn_file {
+  margin-right: 3px;
+}
+.admin_table_list .btn_file:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 19px;
+  background: url("../images/icon/icon_file.png") no-repeat;
+  margin-right: 4px;
+  vertical-align: -4px;
+}
+.admin_table_list .btn_cal:after {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url("../images/icon/icon_cal2.png") no-repeat;
+  margin-left: 4px;
+  vertical-align: -4px;
+}
+
+.btn_admin {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 34px;
+}
+.btn_admin.color_type1 {
+  background: #005fae;
+  color: #fff;
+}
+.btn_admin.color_type2 {
+  background: #fff;
+  color: #0b0b0b;
+  border: 1px solid #c5d2d5;
 }
 
 .wrap {

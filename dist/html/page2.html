@@ -7,8 +7,8 @@
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
   <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/ui.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/ui.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -19,148 +19,114 @@
     <header class="header">
       <div class="header_inner">
         <h2 class="header_title">현장 시험접수</h2>
-        <p class="header_breadcrumb">현장 시험접수 &gt; 시험신청</p>
+        <p class="header_breadcrumb">현장 시험접수 &gt; 가견적</p>
       </div>
     </header>
 
     <div class="container">
-      
+
       <section>
         <div>
-          <h3>시험신청</h3>
-          <p>시험 희망일을 선택해 주세요.</p>
+          <h3>가견적</h3>
         </div>
-
         <div>
           <div>
-            <p>선택하신 시험 희망일은  <strong>2023년 4월 1일(토)</strong>입니다.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>구분</th>
+                  <td>
+                    <label><input type="radio" name="radio1"><span>LH현장</span></label>
+                    <label><input type="radio" name="radio1"><span>SH현장</span></label>
+                    <label><input type="radio" name="radio1"><span>민영현장</span></label>
+                  </td>
+                </tr>
+                <tr>
+                  <th>시험항목</th>
+                  <td>
+                    <div>
+                      <label><input type="checkbox"><span>벼락 추락 안정성 시험</span></label>
+                      <div><input type="text"> 개소</div>
+                    </div>
+                    <div>
+                      <label><input type="checkbox"><span>신발장 전도 안정성 시험</span></label>
+                      <div><input type="text"> 개소</div>
+                    </div>
+                    <div>
+                      <label><input type="checkbox"><span>신발장 전도 안정성 시험</span></label>
+                      <div><input type="text"> 개소</div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div>
-            <button type="button">이전달</button>
-            <p>
-              <span>2023.4</span>
-              <span>TODAY</span>
-            </p>
-            <button type="button">다음달</button>
-          </div>
-          <div class="cal_body">
-            <div class="cal_body_day">
-              <div class="item sun">SUNDAY</div>
-              <div class="item">MONDAY</div>
-              <div class="item">TUESDAY</div>
-              <div class="item">WEDNESDAY</div>
-              <div class="item">THURSDAY</div>
-              <div class="item">FRIDAY</div>
-              <div class="item">SATURDAY</div>
-            </div>
-            <div class="cal_body_date">
-              <div class="item sun disDate"></div>
-              <div class="item disDate"></div>
-              <div class="item disDate"></div>
-              <div class="item disDate"></div>
-              <div class="item disDate"></div>
-              <div class="item disDate"></div>
-              <div class="item today"><span class="date">1</span></div>
-              <div class="item sun disDate"><span class="date">2</span></div>
-              <div class="item"><span class="date">3</span></div>
-              <div class="item disDate"><span class="date">4</span>
-                <button type="button">접수가능</button>
+            <p>견적금액</p>
+            <div>
+              <div>
+                <strong>840,000</strong>
+                <span>원</span>
               </div>
-              <div class="item"><span class="date">5</span></div>
-              <div class="item"><span class="date">6</span></div>
-              <div class="item"><span class="date">7</span></div>
-              <div class="item"><span class="date">8</span></div>
-              <div class="item sun disDate"><span class="date">9</span></div>
-              <div class="item disDate"><span class="date">10</span>
-                <button type="button" disabled>예약완료</button>
-              </div>
-              <div class="item"><span class="date">11</span></div>
-              <div class="item"><span class="date">12</span></div>
-              <div class="item"><span class="date">13</span></div>
-              <div class="item"><span class="date">14</span></div>
-              <div class="item"><span class="date">15</span></div>
-              <div class="item sun disDate"><span class="date">16</span></div>
-              <div class="item"><span class="date">17</span></div>
-              <div class="item"><span class="date">18</span>
-                <div class="reg_items">
-                  <span class="reg_items_txt">강원/춘천</span>
-                  <select class="reg_items_select">
-                    <option value="">A팀</option>
-                    <option value="">B팀</option>
-                    <option value="">C팀</option>
-                  </select>
-                </div>
-                <div class="reg_items">
-                  <span class="reg_items_txt">강원/춘천</span>
-                  <select class="reg_items_select">
-                    <option value="">A팀</option>
-                    <option value="" selected>B팀</option>
-                    <option value="">C팀</option>
-                  </select>
-                </div>
-                <div class="reg_items">
-                  <span class="reg_items_txt">강원/춘천</span>
-                  <select class="reg_items_select">
-                    <option value="">A팀</option>
-                    <option value="">B팀</option>
-                    <option value="" selected>C팀</option>
-                  </select>
-                </div>
-              </div>
-              <div class="item"><span class="date">19</span></div>
-              <div class="item"><span class="date">20</span></div>
-              <div class="item"><span class="date">21</span></div>
-              <div class="item"><span class="date">22</span></div>
-              <div class="item sun disDate"><span class="date">23</span></div>
-              <div class="item"><span class="date">24</span></div>
-              <div class="item"><span class="date">25</span></div>
-              <div class="item"><span class="date">26</span></div>
-              <div class="item"><span class="date">27</span></div>
-              <div class="item"><span class="date">28</span></div>
-              <div class="item"><span class="date">29</span></div>
-              <div class="item sun disDate"><span class="date">30</span></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
+              <span>(VAT별도)</span>
             </div>
           </div>
-        </div>
-
-        <div class="detail_box">
-          <p class="detail_box_tit">배정관리 상세</p>
-          <div class="detail_box_input">
-            <label class="row">
-              <div class="tit">현장명</div>
-              <div class="cont"><input type="text" value="현장명"></div>
-            </label>
-            <label class="row">
-              <div class="tit">민영현장</div>
-              <div class="cont"><input type="text" value="경기도 안양시 평촌동 144-56"></div>
-            </label>
-            <label class="row">
-              <div class="tit">현장방문</div>
-              <div class="cont">
-                <select>
-                  <option value="">A팀, B팀, C팀</option>
-                </select>
-              </div>
-            </label>
-            <label class="row">
-              <div class="tit">민영현장</div>
-              <div class="cont"><input type="text" class="cal"></div>
-            </label>
-          </div>
-        </div>
-
-        <div class="btn_wrap">
-          <button type="button"><span>이전</span></button>
-          <button type="button"><span>다음</span></button>
-          <button type="button"><span>접수완료</span></button>
         </div>
       </section>
+
+      <div class="btn_wrap">
+        <button type="button" class="btn_type color_type1">인쇄하기</button>
+        <button type="button" class="btn_type color_type2">닫기</button>
+      </div>
+
+      <div>
+        <details open>
+          <summary>
+            현장 시험 수수료 상향 조정 (안) 및 출장비산정 
+            <span>(VAT별도/원)</span>
+          </summary>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th rowspan="2">구분</th>
+                  <th>LH현장</th>
+                  <th rowspan="2">구분</th>
+                  <th>민영현장</th>
+                  <th rowspan="2">비고</th>
+                </tr>
+                <tr>
+                  <th>수수료 (3개소 기준)</th>
+                  <th>수수료 (1개소 기준)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="4">전국 공통</td>
+                  <td rowspan="4">750,000</td>
+                  <td>수도권</td>
+                  <td>700,000</td>
+                  <td rowspan="4">700,000</td>
+                  <td>공통사항 추가 시험 시 개소 당 130,000원 발생</td>
+                </tr>
+                <tr>
+                  <td>충청도/강원도</td>
+                  <td>800,000</td>
+                </tr>
+                <tr>
+                  <td>전라도/경상도</td>
+                  <td>900,000</td>
+                </tr>
+                <tr>
+                  <td>도서(제주도)</td>
+                  <td>1,000,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+
     </div>
 
     <footer class="footer">
@@ -183,13 +149,5 @@
     </footer>
 
   </div>
-
-  <script>
-    new DragItem({
-      callBack: ()=>{
-        alert('이동 끝');
-      }
-    })
-  </script>
 </body>
 </html>

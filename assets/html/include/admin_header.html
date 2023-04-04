@@ -1,13 +1,18 @@
-    <header class="admin_snb">
-      <h2 class="admin_ci"><img src="../images/ci_admin.png" alt=""></h2>
-      <nav class="admin_nav">
-        <ul class="admin_nav_list">
-          <li class="admin_nav_item admin_nav_item_active"><a href="#">사용자 관리</a></li>
-          <li class="admin_nav_item"><a href="#">코드 관리</a></li>
-          <li class="admin_nav_item"><a href="#">접수 관리</a></li>
-          <li class="admin_nav_item"><a href="#">배정 관리</a></li>
-          <li class="admin_nav_item"><a href="#">보고서 관리</a></li>
-          <li class="admin_nav_item"><a href="#">입금 관리</a></li>
-        </ul>
-      </nav>
+    <header class="admin_header">
+      <div class="admin_header_top">
+        <h1 class="admin_title">현장 시험접수 시스템</h1>
+      </div>
+      <div class="admin_snb">
+        <h2 class="admin_ci"><img src="../images/ci_admin.png" alt="KASTI"></h2>
+        <nav class="admin_nav">
+          <ul class="admin_nav_list">
+            @@if(cate === 'cate1'){<li class="admin_nav_item admin_nav_item_active"><a href="#">사용자 관리</a></li>}@@if(cate !== 'cate1'){<li class="admin_nav_item"><a href="#">사용자 관리</a></li>}
+            @@if(cate === 'cate2'){<li class="admin_nav_item admin_nav_item_active"><a href="#">코드 관리</a></li>}@@if(cate !== 'cate2'){<li class="admin_nav_item"><a href="#">코드 관리</a></li>}
+            @@if(cate === 'cate3'){<li class="admin_nav_item admin_nav_item_active"><a href="#">접수 관리</a></li>}@@if(cate !== 'cate3'){<li class="admin_nav_item"><a href="#">접수 관리</a></li>}
+            @@if(cate === 'cate4'){<li class="admin_nav_item admin_nav_item_active"><a href="#">배정 관리</a></li>}@@if(cate !== 'cate4'){<li class="admin_nav_item"><a href="#">배정 관리</a></li>}
+            @@if(cate === 'cate5'){<li class="admin_nav_item admin_nav_item_active"><a href="#">보고서 관리</a></li>}@@if(cate !== 'cate5'){<li class="admin_nav_item"><a href="#">보고서 관리</a></li>}
+            @@if(cate === 'cate6'){<li class="admin_nav_item admin_nav_item_active"><a href="#">입금 관리</a></li>}@@if(cate !== 'cate6'){<li class="admin_nav_item"><a href="#">입금 관리</a></li>}
+          </ul>
+        </nav>
+      </div>
     </header>
