@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   -webkit-text-size-adjust: none;
   margin: 0;
@@ -420,62 +421,55 @@ pre {
   justify-content: center;
   gap: 10px;
 }
+.btn_wrap_type2 {
+  margin-top: 15px;
+}
 
 .input_chk {
   position: relative;
-  padding-left: 27px;
 }
 .input_chk input[type=checkbox] ~ span:before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: inline-block;
   width: 19px;
   height: 19px;
+  margin-right: 8px;
   background: #fff url("../images/icon/icon_chk2.png") no-repeat 50% 50%;
   border: 1px solid #c1c1c1;
   box-sizing: border-box;
+  vertical-align: -3px;
 }
 .input_chk input[type=checkbox]:checked ~ span:before {
   background-color: #5f6ee2;
   border-color: #5f6ee2;
 }
-.input_chk input[type=radio] ~ span:after,
 .input_chk input[type=radio] ~ span:before {
   content: "";
-  position: absolute;
-  border-radius: 50%;
-}
-.input_chk input[type=radio] ~ span:before {
-  top: 0;
-  left: 0;
+  display: inline-block;
   width: 21px;
   height: 21px;
-  background: #fff;
+  margin-right: 7px;
+  background: #fff url("../images/icon/icon_radio.png") no-repeat;
   border: 1px solid #c1c1c1;
+  border-radius: 50%;
   box-sizing: border-box;
-}
-.input_chk input[type=radio] ~ span:after {
-  top: 4.5px;
-  left: 4.5px;
-  width: 12px;
-  height: 12px;
-  background: #e6e6e6;
+  vertical-align: -3px;
 }
 .input_chk input[type=radio]:checked ~ span {
   color: #2f37d3;
 }
 .input_chk input[type=radio]:checked ~ span:before {
+  background-position: -1px 100%;
   border: 2px solid #5663e0;
-}
-.input_chk input[type=radio]:checked ~ span:after {
-  background: #5663e0;
 }
 
 .wrap {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+}
+.wrap.bg_wrap {
+  background: #f8f9f8;
 }
 
 .header {
@@ -486,7 +480,7 @@ pre {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 43px;
+  padding: 11px 0 10px;
   background: #5f63d3;
   color: #fff;
   font-family: "SCoreDream";
@@ -524,6 +518,10 @@ pre {
 
 .container {
   flex: 1;
+  width: 1100px;
+  margin: 0 auto;
+  padding: 40px 30px 100px;
+  box-sizing: border-box;
 }
 
 .footer {
@@ -800,5 +798,221 @@ pre {
   font-size: 21px;
   font-weight: bold;
   border-bottom: 2px solid #ececec;
+}
+
+.page_title {
+  margin: 0 0 15px 20px;
+  font-size: 24px;
+  font-family: "SCoreDream";
+  font-weight: 500;
+}
+
+.box_spt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box_type1 {
+  background: #fff;
+  border-radius: 24px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.box_type1 .form_board {
+  margin: 18px;
+}
+
+.box_type2 {
+  padding: 20px 40px;
+  background: #fff;
+  border-radius: 12px;
+}
+.box_type2 .acco_box {
+  margin: 0 10px;
+}
+.box_type2 .acco_cont {
+  padding: 0 0 10px;
+}
+
+.form_board th {
+  position: relative;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.7);
+  vertical-align: top;
+  font-size: 17px;
+}
+.form_board th span {
+  position: relative;
+  display: block;
+  padding-left: 14px;
+}
+.form_board th span:before {
+  content: "◼︎";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4px;
+  height: 4px;
+  font-size: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.form_board td {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 17px;
+}
+.form_board tr ~ tr th,
+.form_board tr ~ tr td {
+  padding-top: 30px;
+}
+.form_board .td_radio .input_chk ~ .input_chk {
+  margin-left: 45px;
+}
+.form_board .td_form1 .input_txt input[type=text] {
+  width: 71px;
+  height: 31px;
+  padding: 0 17px;
+  text-align: right;
+  border: 1px solid #e6e6e6;
+  border-radius: 31px;
+  vertical-align: 0;
+}
+.form_board .td_form1_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form_board .td_form1_row ~ .td_form1_row {
+  margin-top: 7px;
+}
+
+.list_board th, .list_board td {
+  font-size: 17px;
+  font-weight: 400;
+  border: 1px solid #e3e3e3;
+}
+.list_board thead th {
+  padding: 10px 0;
+  background: #f7f6fa;
+}
+.list_board td {
+  padding: 10px;
+  text-align: center;
+}
+
+.payment_result {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0;
+  overflow: hidden;
+}
+.payment_result_tit {
+  margin: 0 34px 10px;
+  color: #5f6ee2;
+  font-size: 17px;
+}
+.payment_result_box {
+  width: 100%;
+  padding: 0 32px 25px;
+  background: #5f6ee2;
+  text-align: right;
+  color: #fff;
+}
+.payment_result_value {
+  font-size: 26px;
+}
+.payment_result_value .num {
+  font-size: 32px;
+}
+.payment_result_value .txt {
+  font-weight: 3 0;
+}
+.payment_result_vat {
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.acco_box[open] .acco_tit:after {
+  transform: perspective(11px) rotateX(0);
+}
+.acco_tit {
+  position: relative;
+  font-size: 18px;
+  letter-spacing: -1px;
+  cursor: pointer;
+}
+.acco_tit::marker {
+  display: none;
+  content: "";
+}
+.acco_tit:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 18px;
+  height: 11px;
+  margin-top: -6px;
+  background: url("../images/icon/icon_arrw.png") no-repeat;
+  transform: perspective(20px) rotateX(-180deg);
+  transition: transform 0.5s;
+}
+.acco_tit .etc {
+  margin-left: 13px;
+  font-size: 14px;
+  color: #7d7d7d;
+}
+.acco_cont {
+  margin-top: 15px;
+}
+
+.complete_box {
+  margin: 97px 0 42px;
+  background: #fff;
+  text-align: center;
+}
+.complete_tit {
+  padding: 60px 0 32px;
+  font-size: 29px;
+  line-height: 45px;
+  letter-spacing: -1.45px;
+  color: #5f63d3;
+}
+.complete_txt {
+  font-size: 19px;
+  line-height: 27px;
+  opacity: 0.58;
+}
+.complete_txt2 {
+  margin-top: 40px;
+  font-size: 19px;
+  color: #343539;
+}
+.complete_price_box {
+  margin-top: 45px;
+  background: #f9f8fd;
+  border: 1px solid #c9c8cb;
+}
+.complete_price_txt {
+  height: 132px;
+  padding-top: 30px;
+  border: 6px solid #edeaf7;
+  color: #343539;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+.complete_price_value {
+  color: #5f63d3;
+}
+.complete_price_value .num {
+  display: inline-block;
+  vertical-align: 0;
+  font-size: 32px;
+  font-weight: 500;
 }
 /*# sourceMappingURL=style.css.map */

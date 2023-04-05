@@ -11,110 +11,120 @@
   <script src="../js/ui.js"></script>
 </head>
 <body>
-  <div class="wrap">
+  <div class="wrap bg_wrap">
 
 @@include('./header.html', {name: "가견적"})
 
     <div class="container">
 
-      <section>
-        <div>
-          <h3>가견적</h3>
-        </div>
-        <div>
-          <div>
-            <table>
-              <tbody>
-                <tr>
-                  <th>구분</th>
-                  <td>
-                    <label class="input_chk"><input type="radio" name="radio1"><span>LH현장</span></label>
-                    <label class="input_chk"><input type="radio" name="radio1"><span>SH현장</span></label>
-                    <label class="input_chk"><input type="radio" name="radio1"><span>민영현장</span></label>
-                  </td>
-                </tr>
-                <tr>
-                  <th>시험항목</th>
-                  <td>
-                    <div>
-                      <label class="input_chk"><input type="checkbox"><span>벼락 추락 안정성 시험</span></label>
-                      <div><input type="text"> 개소</div>
-                    </div>
-                    <div>
-                      <label class="input_chk"><input type="checkbox"><span>신발장 전도 안정성 시험</span></label>
-                      <div><input type="text"> 개소</div>
-                    </div>
-                    <div>
-                      <label class="input_chk"><input type="checkbox"><span>신발장 전도 안정성 시험</span></label>
-                      <div><input type="text"> 개소</div>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div>
-            <p>견적금액</p>
-            <div>
-              <div>
-                <strong>840,000</strong>
-                <span>원</span>
-              </div>
-              <span>(VAT별도)</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div class="page_header">
+        <h3 class="page_title">가견적</h3>
+      </div>
 
-      <div class="btn_wrap">
+      <div class="box_spt">
+        <div class="box_type1" style="width: 734px;">
+          <table class="form_board" style="width: 500px;">
+            <colgroup>
+              <col style="width: 130px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th><span>구분</span></th>
+                <td class="td_radio">
+                  <label class="input_chk"><input type="radio" name="radio1"><span>LH현장</span></label>
+                  <label class="input_chk"><input type="radio" name="radio1"><span>SH현장</span></label>
+                  <label class="input_chk"><input type="radio" name="radio1"><span>민영현장</span></label>
+                </td>
+              </tr>
+              <tr>
+                <th><span>시험항목</span></th>
+                <td class="td_form1">
+                  <div class="td_form1_row">
+                    <label class="input_chk"><input type="checkbox"><span>벼락 추락 안정성 시험</span></label>
+                    <div class="input_txt"><input type="text" value="4"> 개소</div>
+                  </div>
+                  <div class="td_form1_row">
+                    <label class="input_chk"><input type="checkbox"><span>신발장 전도 안정성 시험</span></label>
+                    <div class="input_txt"><input type="text" value="24"> 개소</div>
+                  </div>
+                  <div class="td_form1_row">
+                    <label class="input_chk"><input type="checkbox"><span>욕실장 전도 안정성 시험</span></label>
+                    <div class="input_txt"><input type="text" value="4"> 개소</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="box_type1 payment_result" style="width: 292px;">
+          <p class="payment_result_tit">견적금액</p>
+          <div class="payment_result_box">
+            <div class="payment_result_value">
+              <strong class="num">840,000</strong><span class="txt">원</span>
+            </div>
+            <span class="payment_result_vat">(VAT별도)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn_wrap btn_wrap_type2">
         <button type="button" class="btn_type color_type1">인쇄하기</button>
         <button type="button" class="btn_type color_type2">닫기</button>
       </div>
 
-      <div>
-        <details open>
-          <summary>
+      <div class="box_type2" style="margin-top: 58px;">
+        <details open class="acco_box">
+          <summary class="acco_tit">
             현장 시험 수수료 상향 조정 (안) 및 출장비산정 
-            <span>(VAT별도/원)</span>
+            <span class="etc">(VAT별도/원)</span>
           </summary>
-          <div>
-            <table>
-              <thead>
-                <tr>
-                  <th rowspan="2">구분</th>
-                  <th>LH현장</th>
-                  <th rowspan="2">구분</th>
-                  <th>민영현장</th>
-                  <th rowspan="2">비고</th>
-                </tr>
-                <tr>
-                  <th>수수료 (3개소 기준)</th>
-                  <th>수수료 (1개소 기준)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td rowspan="4">전국 공통</td>
-                  <td rowspan="4">750,000</td>
-                  <td>수도권</td>
-                  <td>700,000</td>
-                  <td rowspan="4">700,000</td>
-                  <td>공통사항 추가 시험 시 개소 당 130,000원 발생</td>
-                </tr>
-                <tr>
-                  <td>충청도/강원도</td>
-                  <td>800,000</td>
-                </tr>
-                <tr>
-                  <td>전라도/경상도</td>
-                  <td>900,000</td>
-                </tr>
-                <tr>
-                  <td>도서(제주도)</td>
-                  <td>1,000,000</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="acco_cont">
+            <div class="list_board">
+              <table>
+                <colgroup>
+                  <col style="width:20%;">
+                  <col style="width:20%;">
+                  <col style="width:20%;">
+                  <col style="width:20%;">
+                  <col style="width:20%;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th rowspan="2">구분</th>
+                    <th>LH현장</th>
+                    <th rowspan="2">구분</th>
+                    <th>민영현장</th>
+                    <th rowspan="2">비고</th>
+                  </tr>
+                  <tr>
+                    <th>수수료 (3개소 기준)</th>
+                    <th>수수료 (1개소 기준)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="4">전국 공통</td>
+                    <td rowspan="4">750,000</td>
+                    <td>수도권</td>
+                    <td>700,000</td>
+                    <td rowspan="4">공통사항 추가 시험 시 개소 당 130,000원 발생</td>
+                  </tr>
+                  <tr>
+                    <td>충청도/강원도</td>
+                    <td>800,000</td>
+                  </tr>
+                  <tr>
+                    <td>전라도/경상도</td>
+                    <td>900,000</td>
+                  </tr>
+                  <tr>
+                    <td>도서(제주도)</td>
+                    <td>1,000,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </details>
       </div>
