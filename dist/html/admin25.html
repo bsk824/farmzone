@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+  <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/ui.js"></script>
+</head>
+<body>
+  <div class="admin_wrap">
+
+    <header class="admin_header">
+      <div class="admin_header_top">
+        <h1 class="admin_title">현장 시험접수 시스템</h1>
+      </div>
+      <div class="admin_snb">
+        <h2 class="admin_ci"><img src="../images/ci_admin.png" alt="KASTI"></h2>
+        <nav class="admin_nav">
+          <ul class="admin_nav_list">
+            <li class="admin_nav_item"><a href="#">사용자 관리</a></li>
+            <li class="admin_nav_item"><a href="#">코드 관리</a></li>
+            <li class="admin_nav_item"><a href="#">접수 관리</a></li>
+            <li class="admin_nav_item admin_nav_item_active"><a href="#">배정 관리</a></li>
+            <li class="admin_nav_item"><a href="#">보고서 관리</a></li>
+            <li class="admin_nav_item"><a href="#">입금 관리</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="admin_container">
+
+      <h2 class="admin_page_title">배정관리</h2>
+
+      <div class="cal_wrap">
+        <div class="cal_nav">
+          <button type="button" class="btn_nav btn_nav_prev">이전달</button>
+          <p class="cal_month">
+            <span class="month">2023.4</span>
+          </p>
+          <button type="button" class="btn_nav btn_nav_next">다음달</button>
+        </div>
+        <div class="cal_body">
+          <div class="cal_body_day">
+            <div class="item sun">SUNDAY</div>
+            <div class="item">MONDAY</div>
+            <div class="item">TUESDAY</div>
+            <div class="item">WEDNESDAY</div>
+            <div class="item">THURSDAY</div>
+            <div class="item">FRIDAY</div>
+            <div class="item">SATURDAY</div>
+          </div>
+          <div class="cal_body_date">
+            <div class="item sun disDate"></div>
+            <div class="item disDate"></div>
+            <div class="item disDate"></div>
+            <div class="item disDate"></div>
+            <div class="item disDate"></div>
+            <div class="item disDate"></div>
+            <div class="item today"><span class="date">1</span></div>
+            <div class="item sun disDate"><span class="date">2</span></div>
+            <div class="item"><span class="date">3</span></div>
+            <div class="item"><span class="date">4</span> </div>
+            <div class="item"><span class="date">5</span></div>
+            <div class="item"><span class="date">6</span></div>
+            <div class="item"><span class="date">7</span></div>
+            <div class="item"><span class="date">8</span></div>
+            <div class="item sun disDate"><span class="date">9</span></div>
+            <div class="item"><span class="date">10</span></div>
+            <div class="item"><span class="date">11</span></div>
+            <div class="item"><span class="date">12</span></div>
+            <div class="item"><span class="date">13</span></div>
+            <div class="item"><span class="date">14</span></div>
+            <div class="item"><span class="date">15</span></div>
+            <div class="item sun disDate"><span class="date">16</span></div>
+            <div class="item"><span class="date">17</span></div>
+            <div class="item"><span class="date">18</span>
+              <div class="reg_items">
+                <span class="reg_items_txt">강원/춘천</span>
+                <select class="reg_items_select">
+                  <option value="">A팀</option>
+                  <option value="">B팀</option>
+                  <option value="">C팀</option>
+                </select>
+              </div>
+              <div class="reg_items">
+                <span class="reg_items_txt">강원/춘천</span>
+                <select class="reg_items_select">
+                  <option value="">A팀</option>
+                  <option value="" selected>B팀</option>
+                  <option value="">C팀</option>
+                </select>
+              </div>
+              <div class="reg_items">
+                <span class="reg_items_txt">강원/춘천</span>
+                <select class="reg_items_select">
+                  <option value="">A팀</option>
+                  <option value="">B팀</option>
+                  <option value="" selected>C팀</option>
+                </select>
+              </div>
+            </div>
+            <div class="item"><span class="date">19</span></div>
+            <div class="item"><span class="date">20</span></div>
+            <div class="item"><span class="date">21</span></div>
+            <div class="item"><span class="date">22</span></div>
+            <div class="item sun disDate"><span class="date">23</span></div>
+            <div class="item"><span class="date">24</span></div>
+            <div class="item"><span class="date">25</span></div>
+            <div class="item"><span class="date">26</span></div>
+            <div class="item"><span class="date">27</span></div>
+            <div class="item"><span class="date">28</span></div>
+            <div class="item"><span class="date">29</span></div>
+            <div class="item sun disDate"><span class="date">30</span></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail_box">
+        <p class="detail_box_tit">배정관리 상세</p>
+        <div class="detail_box_input">
+          <label class="row">
+            <div class="tit">현장명</div>
+            <div class="cont"><input type="text" value="현장명"></div>
+          </label>
+          <label class="row">
+            <div class="tit">민영현장</div>
+            <div class="cont"><input type="text" value="경기도 안양시 평촌동 144-56"></div>
+          </label>
+          <label class="row">
+            <div class="tit">현장방문</div>
+            <div class="cont">
+              <select>
+                <option value="">A팀, B팀, C팀</option>
+              </select>
+            </div>
+          </label>
+          <label class="row">
+            <div class="tit">시험일자</div>
+            <div class="cont"><input type="text" class="cal"></div>
+          </label>
+        </div>
+        <div class="btn_wrap">
+          <button type="button" class="btn_type color_type1">저장</button>
+          <button type="button" class="btn_type color_type2" onclick="dragItem.detailHide()">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="admin_footer">
+      <small>Copyright (c)  2023 KOREA FURNITURE  TESTING & RESEARCH INSTITUTE. ALL RIGHTS RESERVED. </small>
+    </footer>
+
+  </div>
+
+  <script>
+    const dragItem = new DragItem({
+      callBack: ()=>{
+        alert('이동 끝');
+      }
+    })
+  </script>
+</body>
+</html>

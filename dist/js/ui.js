@@ -91,7 +91,7 @@ class DragItem {
       });
     }
     this.detailBox.addEventListener('mouseleave', ()=>{
-      this.detailBox.classList.remove('isShow');
+      this.detailHide();
     })
   }
   detailShow(e) {
@@ -103,5 +103,8 @@ class DragItem {
       const posLeft = rect.left + rect.width + 17;
       this.detailBox.style.cssText = `top:${posTop}px;left:${posLeft}px;`;
     }
+  }
+  detailHide() {
+    this.detailBox.classList.remove('isShow');
   }
 }

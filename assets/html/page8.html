@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+  <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/ui.js"></script>
+</head>
+<body>
+  <div class="wrap bg_wrap">
+
+@@include('./header.html', {name: "시험신청"})
+
+    <div class="container">
+      
+      <section>
+        <div class="page_header">
+          <h3 class="page_title">시험신청</h3>
+          <p class="page_desc">시험 희망일을 선택해 주세요.</p>
+        </div>
+
+        <div class="cal_wrap">
+          <div class="cal_head">
+            <p>선택하신 시험 희망일은  <strong>2023년 4월 1일(토)</strong>입니다.</p>
+          </div>
+          <div class="cal_nav">
+            <button type="button" class="btn_nav btn_nav_prev">이전달</button>
+            <p class="cal_month">
+              <span class="month">2023.4</span>
+              <span class="today">TODAY</span>
+            </p>
+            <button type="button" class="btn_nav btn_nav_next">다음달</button>
+          </div>
+          <div class="cal_body">
+            <div class="cal_body_day">
+              <div class="item sun">SUNDAY</div>
+              <div class="item">MONDAY</div>
+              <div class="item">TUESDAY</div>
+              <div class="item">WEDNESDAY</div>
+              <div class="item">THURSDAY</div>
+              <div class="item">FRIDAY</div>
+              <div class="item">SATURDAY</div>
+            </div>
+            <div class="cal_body_date">
+              <div class="item sun"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item today"><span class="date">1</span></div>
+              <div class="item sun"><span class="date">2</span></div>
+              <div class="item"><span class="date">3</span></div>
+              <div class="item"><span class="date">4</span>
+                <button type="button" class="btn_reg">접수가능</button>
+              </div>
+              <div class="item"><span class="date">5</span></div>
+              <div class="item"><span class="date">6</span></div>
+              <div class="item"><span class="date">7</span></div>
+              <div class="item"><span class="date">8</span></div>
+              <div class="item sun"><span class="date">9</span></div>
+              <div class="item"><span class="date">10</span>
+                <button type="button" class="btn_reg" disabled>예약완료</button>
+              </div>
+              <div class="item"><span class="date">11</span></div>
+              <div class="item"><span class="date">12</span></div>
+              <div class="item"><span class="date">13</span></div>
+              <div class="item"><span class="date">14</span></div>
+              <div class="item"><span class="date">15</span></div>
+              <div class="item sun"><span class="date">16</span></div>
+              <div class="item"><span class="date">17</span></div>
+              <div class="item"><span class="date">18</span></div>
+              <div class="item"><span class="date">19</span></div>
+              <div class="item"><span class="date">20</span></div>
+              <div class="item"><span class="date">21</span></div>
+              <div class="item"><span class="date">22</span></div>
+              <div class="item sun"><span class="date">23</span></div>
+              <div class="item"><span class="date">24</span></div>
+              <div class="item"><span class="date">25</span></div>
+              <div class="item"><span class="date">26</span></div>
+              <div class="item"><span class="date">27</span></div>
+              <div class="item"><span class="date">28</span></div>
+              <div class="item"><span class="date">29</span></div>
+              <div class="item sun"><span class="date">30</span></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn_wrap btn_wrap_type2">
+          <button type="button" class="btn_type color_type2 arrw_prev" disabled>이전</button>
+          <button type="button" class="btn_type color_type2 arrw_next">다음</button>
+          <button type="button" class="btn_type color_type3">접수완료</button>
+        </div>
+      </section>
+    </div>
+
+@@include('./footer.html')
+    
+  </div>
+</body>
+</html>
