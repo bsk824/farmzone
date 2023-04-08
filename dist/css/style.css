@@ -38,6 +38,13 @@ input[type=radio] {
   opacity: 0;
 }
 
+input[type=password],
+input[type=text] {
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid #cdd8db;
+}
+
 select::-ms-expand {
   display: none;
 }
@@ -102,7 +109,7 @@ pre {
 
 /*sub_tabMenu*/
 .sub_tabMenu {
-  margin-top: 30px;
+  margin: 30px 0 50px;
 }
 
 .sub_tabMenu .tabBox {
@@ -137,6 +144,9 @@ pre {
 
 .admin_wrap {
   min-width: 1100px;
+}
+.admin_wrap .paging {
+  margin: 55px 0 0 -130px;
 }
 .admin_header_top {
   position: fixed;
@@ -275,6 +285,7 @@ pre {
 .admin_table_list table {
   min-width: 1100px;
   text-align: center;
+  table-layout: auto;
 }
 .admin_table_list table .left {
   text-align: left;
@@ -377,7 +388,7 @@ pre {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 55px 0 0 -130px;
+  margin: 36px 0 0;
 }
 .paging .btn_nav {
   position: relative;
@@ -505,6 +516,9 @@ pre {
 .input_chk {
   position: relative;
 }
+.input_chk input[type=checkbox] {
+  position: absolute;
+}
 .input_chk input[type=checkbox] ~ span:before {
   content: "";
   display: inline-block;
@@ -519,6 +533,9 @@ pre {
 .input_chk input[type=checkbox]:checked ~ span:before {
   background-color: #5f6ee2;
   border-color: #5f6ee2;
+}
+.input_chk input[type=radio] {
+  position: absolute;
 }
 .input_chk input[type=radio] ~ span:before {
   content: "";
@@ -832,8 +849,11 @@ pre {
 .form_board tr ~ tr td {
   padding-top: 30px;
 }
-.form_board .td_radio .input_chk ~ .input_chk {
+.form_board .td_chk .input_chk ~ .input_chk {
   margin-left: 45px;
+}
+.form_board .td_chk2 .input_chk ~ .input_chk {
+  margin-left: 35px;
 }
 .form_board .td_form1 .input_txt input[type=text] {
   width: 71px;
@@ -957,7 +977,7 @@ pre {
 }
 
 .complete_box {
-  margin: 97px 0 42px;
+  margin: 0 0 42px;
   background: #fff;
   text-align: center;
 }
