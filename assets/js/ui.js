@@ -108,3 +108,18 @@ class DragItem {
     this.detailBox.classList.remove('isShow');
   }
 }
+
+function scrollMov(num) {
+  const btn = event.target;
+  const wrap = btn.closest('.tab');
+  const tabs = wrap.querySelectorAll('li');
+  tabs.forEach(_this=>{_this.classList.remove('on')})
+  btn.closest('li').classList.add('on');
+  
+  const targets = document.querySelectorAll('.target-box');
+  const tops = [];
+  targets.forEach(_this=>{
+    tops.push(_this.getBoundingClientRect().top + window.scrollY);
+  })
+  window.scrollTo(0, tops[num - 1]);
+}

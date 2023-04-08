@@ -30,13 +30,13 @@
       </div>
 
       <ul class="tab">
-        <li class="step1 on"><button><span>STEP 01<strong>의뢰정보</strong></span></button></li>
-        <li class="step2"><button><span>STEP 02<strong>현장정보</strong></span></button></li>
-        <li class="step3"><button><span>STEP 03<strong>세금계산서</strong></span></button></li>
-        <li class="step4"><button><span>STEP 04<strong>접수완료</strong></span></button></li>
+        <li class="step1 on"><button onclick="scrollMov(1)"><span>STEP 01<strong>의뢰정보</strong></span></button></li>
+        <li class="step2"><button onclick="scrollMov(2)"><span>STEP 02<strong>현장정보</strong></span></button></li>
+        <li class="step3"><button onclick="scrollMov(3)"><span>STEP 03<strong>세금계산서</strong></span></button></li>
+        <li class="step4"><button onclick="scrollMov(4)"><span>STEP 04<strong>접수완료</strong></span></button></li>
       </ul>
 
-      <div class="box_type2">
+      <div class="box_type2 target-box">
         <div class="table_header">
           <div class="pos_left">
             <h4 class="table_title">의뢰정보를 입력하세요.</h4>
@@ -91,7 +91,7 @@
         </table>
       </div>
 
-      <div class="box_type2">
+      <div class="box_type2 target-box">
         <div class="table_header">
           <div class="pos_left">
             <h4 class="table_title">현장정보를 입력하세요.</h4>
@@ -195,7 +195,7 @@
         </table>
       </div>
 
-      <div class="box_type2">
+      <div class="box_type2 target-box">
         <div class="table_header">
           <div class="pos_left">
             <h4 class="table_title">세금계산서 발급 정보를 입력하세요.</h4>
@@ -277,7 +277,7 @@
         </table>
       </div>
 
-      <div class="btn_wrap btn_wrap_type3">
+      <div class="btn_wrap btn_wrap_type3 target-box">
         <button type="button" class="btn_type color_type2  arrw_prev">이전</button>
         <button type="button" class="btn_type color_type3">접수완료</button>
       </div>
