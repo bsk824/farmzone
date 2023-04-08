@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+  <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/ui.js"></script>
+</head>
+<body>
+  <div class="wrap bg_wrap">
+
+    <div class="header_top_noti">
+      <p>현장 시험접수 시스템에 접속중입니다.</p>
+    </div>
+    <header class="header">
+      <div class="header_inner">
+        <h2 class="header_title">현장 시험접수</h2>
+        <p class="header_breadcrumb">현장 시험접수 &gt; 의뢰내역조회</p>
+      </div>
+    </header>
+
+    <div class="container">
+
+      <div class="page_header">
+        <h3 class="page_title">의뢰내역조회</h3>
+      </div>
+
+      <div class="box_type1">
+        <table class="form_board">
+          <colgroup>
+            <col style="width: 165px;">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th><span>구분</span></th>
+              <td class="td_chk2">
+                <label class="input_chk"><input type="radio" name="radio1"><span>의뢰기관</span></label>
+                <label class="input_chk"><input type="radio" name="radio1"><span>세금계산서 발급기관</span></label>
+              </td>
+            </tr>
+            <tr>
+              <th><span>사업자 등록번호</span></th> 
+              <td>
+                <input type="text" style="width: 88px;">
+                <input type="text" style="width: 88px;">
+                <input type="text" style="width: 153px;">
+              </td>
+            </tr>
+            <tr>
+              <th><span>세부항목조회</span></th> 
+              <td class="td_chk2">
+                <label class="input_chk"><input type="checkbox"><span>시험일자</span></label>
+                <label class="input_chk"><input type="checkbox"><span>거래명세서</span></label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="btn_wrap btn_wrap_type3">
+        <a href="#" class="btn_type color_type1">확인</a>
+      </div>
+
+      <div class="box_type1" style="margin-top: 58px;">
+
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>접수번호</th>
+              <th>구분</th>
+              <th>접수일자</th>
+              <th>시험일자</th>
+              <th>의뢰자</th>
+              <th>현장명</th>
+              <th>진행상태</th>
+              <th>명세서</th>
+            </tr>
+          </thead>
+        </table>
+
+        <div class="paging">
+          <button type="button" class="btn_nav btn_nav_start" disabled>처음</button>
+          <button type="button" class="btn_nav btn_nav_prev" disabled>이전</button>
+          <div class="paging_number">
+            <button type="button" disabled>1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button">4</button>
+            <button type="button">5</button>
+            <button type="button">6</button>
+            <button type="button">7</button>
+            <button type="button">8</button>
+            <button type="button">9</button>
+            <button type="button">10</button>
+          </div>
+          <button type="button" class="btn_nav btn_nav_next">다음</button>
+          <button type="button" class="btn_nav btn_nav_end">끝</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <div class="footer_inner">
+        <ul class="footer_menu">
+          <li><a href="/intro/sub_01.php">회사소개</a></li>
+          <li><a href="/member/privacy.php">개인정보처리방침</a></li>
+          <li><a href="/member/agree.php">이용약관</a></li>
+          <li><a href="#emailModal" data-toggle="modal">이메일무단수집거부</a></li>
+        </ul>
+        <div class="footer_info">
+          <a href="/main/index2.php" class="footer_ci"><img src="../images/ci_footer.png" alt=""></a><br>
+          <span class="addr"><b>주소</b> : 서울시 금천구 가산디지털 1로 88(가산동 345-50) IT 프리미어타워 15층</span><br>
+          <span><b>전화번호</b> : 02-855-0441</span>
+          <span><b>팩스</b> : 02-855-0446</span>
+          <span><b>이메일</b> : pjh@kasti.re.kr</span>
+          <p class="copyright">Copyright (c) 2021 KOREA FURNITURE TESTING &amp; RESEARCH INSTITUTE. ALL RIGHTS RESERVED</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
