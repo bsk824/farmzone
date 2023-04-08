@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+  <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/ui.js"></script>
+</head>
+<body>
+  <div class="admin_wrap">
+
+@@include('./admin_header.html', {cate: "cate3"})
+
+    <div class="admin_container">
+
+      <h2 class="admin_page_title">접수관리</h2>
+
+      <div class="admin_search">
+        <div class="search_column">
+          <select>
+            <option>접수번호</option>
+            <option>보고서번호</option>
+            <option>시험일자</option>
+            <option>의뢰자</option>
+            <option>세금계산서 발생업체</option>
+            <option>현장명</option>
+            <option>진행상태</option>
+            <option>진행됨</option>
+          </select>
+        </div>
+        <div class="search_column">
+          <input type="text">
+        </div>
+        <div class="search_column">
+          <button type="button" class="btn_admin color_type1"><span>조회</span></button>
+        </div>
+      </div>
+
+      <div class="table_header">
+        <div class="pos_left">
+          <button type="button" class="btn_admin color_type2" onclick="confirm('접수를 취소하시겠습니까?')"><span>접수취소</span></button>
+        </div>
+        <div class="pos_right">
+          <button type="button" class="btn_admin color_type2"><span>엑셀다운</span></button>
+        </div>
+      </div>
+      <div class="table_list2">
+        <table>
+          <thead>
+            <tr>
+              <th><label class="input_chk type2 typeOne"><input type="checkbox"><span>선택</span></label></th>
+              <th>순번</th>
+              <th>접수번호</th>
+              <th>보고서 번호</th>
+              <th>접수일자</th>
+              <th>시험일자</th>
+              <th>의뢰자</th>
+              <th>세금계산서<br> 발행업체</th>
+              <th>구분</th>
+              <th>현장명</th>
+              <th>시험항목</th>
+              <th>개소</th>
+              <th>공급가액</th>
+              <th>VAT포함</th>
+              <th>진행상태</th>
+              <th>담당팀</th>
+              <th>거래명세서</th>
+              <th>현자시험<br>의뢰서</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label class="input_chk type2 typeOne"><input type="checkbox"><span>선택</span></label></td>
+              <td>1</td>
+              <td>2303-001</td>
+              <td>R2303-001</td>
+              <td>23.03.01</td>
+              <td>23.03.15</td>
+              <td>두산중공</td>
+              <td>두산중공</td>
+              <td>LH</td>
+              <td>완주상봉 A-2BL 2공구</td>
+              <td>전도안정성 시험</td>
+              <td>3</td>
+              <td>120,000</td>
+              <td>122,000</td>
+              <td>최종완료</td>
+              <td>B팀</td>
+              <td>
+                <button type="button" class="btn_del">보기</button>
+              </td>
+              <td>
+                <button type="button" class="btn_del">보기</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="paging">
+        <button type="button" class="btn_nav btn_nav_start" disabled>처음</button>
+        <button type="button" class="btn_nav btn_nav_prev" disabled>이전</button>
+        <div class="paging_number">
+          <button type="button" disabled>1</button>
+          <button type="button">2</button>
+          <button type="button">3</button>
+          <button type="button">4</button>
+          <button type="button">5</button>
+          <button type="button">6</button>
+          <button type="button">7</button>
+          <button type="button">8</button>
+          <button type="button">9</button>
+          <button type="button">10</button>
+        </div>
+        <button type="button" class="btn_nav btn_nav_next">다음</button>
+        <button type="button" class="btn_nav btn_nav_end">끝</button>
+      </div>
+
+      <div style="margin-top: 50px;">
+        <div class="table_header">
+          <div class="pos_left">
+            <h4 class="table_title">의뢰정보를 입력하세요.</h4>
+          </div>
+        </div>
+        <table class="table_form">
+          <colgroup>
+            <col style="width:180px;">
+            <col>
+            <col style="width:220px;">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>시험항목 선택</th>
+              <td>
+                <input type="text" value="2023-02-09" style="width:100%;">
+              </td>
+              <th>접수일자</th>
+              <td>
+                <input type="text" value="2023-02-09" style="width:100%;">
+              </td>
+            </tr>
+            <tr>
+              <th>의뢰기관</th>
+              <td>
+                <input type="text" value="팜존에쓰엔씨" style="width:100%;">
+              </td>
+              <th>대표자명 (현장대리인)</th>
+              <td>
+                <input type="text" value="천승우" style="width:100%;">
+              </td>
+            </tr>
+            <tr>
+              <th>주소</th>
+              <td colspan="3">
+                <input type="text" value="01080" style="width:120px;">
+                <button class="btn_input">주소찾기</button>
+                <input type="text" value="서울특별시 강북구 수유로23가길 4 (수유동)" style="width:400px;">
+                <input type="text" value="1232" style="width:165px;">
+              </td>
+            </tr>
+            <tr>
+              <th>사업자 등록번호</th>
+              <td colspan="3">
+                <input type="text" style="width:130px;">
+                <input type="text" style="width:130px;">
+                <input type="text" style="width:228px;">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top: 50px;">
+        <div class="table_header">
+          <div class="pos_left">
+            <h4 class="table_title">현장정보를 입력하세요.</h4>
+          </div>
+        </div>
+        <table class="table_form">
+          <colgroup>
+            <col style="width:180px;">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>현장명</th>
+              <td>
+                <input type="text" value="2023-02-09" style="width:100%;">
+              </td>
+            </tr>
+            <tr>
+              <th>의뢰자 (담당자)</th>
+              <td class="td_form">
+                <span>성명: <input type="text" style="width: 140px;"></span>
+                <span>HP: <input type="text" style="width: 140px;"></span>
+                <span>FAX: <input type="text" style="width: 140px;"></span>
+                <span>Email: <input type="text" style="width: 140px;"></span>
+              </td> 
+            </tr>
+            <tr>
+              <th rowspan="2">보고서 수령정보</th>
+              <td class="td_chk">
+                <label class="input_chk type2"><input type="checkbox"><span>의뢰기관과 동일</span></label>
+                <label class="input_chk type2"><input type="checkbox"><span>전자세금계산서발행기관과 동일</span></label>
+                <label class="input_chk type2"><input type="checkbox"><span>기타</span></label>
+              </td>
+            </tr>
+            <tr>
+              <td class="td_form">
+                <span>주소: <input type="text" style="width: 300px;"></span>
+                <span>수령인: <input type="text" style="width: 154px;"></span>
+                <span>HP: <input type="text" style="width: 154px;"></span>
+              </td>
+            </tr>
+            <tr>
+              <th>시험희망일</th>
+              <td>
+                <input type="text" value="2023-02-09" class="input_cal">
+              </td>
+            </tr>
+            <tr>
+              <th>시험주소 (현장주소)</th>
+              <td>
+                <input type="text" style="width:120px;">
+                <button class="btn_input">주소찾기</button>
+                <input type="text" style="width:400px;">
+                <input type="text" style="width:165px;">
+              </td>
+            </tr>
+            <tr>
+              <th>구분</th>
+              <td class="td_chk">
+                <label class="input_chk"><input type="radio"><span>LH 현장</span></label>
+                <label class="input_chk"><input type="radio"><span>SH 현장</span></label>
+                <label class="input_chk"><input type="radio"><span>민영현장</span></label>
+              </td>
+            </tr>
+            <tr>
+              <th>시험항목 선택</th>
+              <td class="td_form1">
+                <div class="td_form1_row">
+                  <label class="input_chk"><input type="checkbox"><span>벼락 추락 안정성 시험</span></label>
+                  <div class="input_txt"><input type="text" value="4"> 개소</div>
+                </div>
+                <div class="td_form1_row">
+                  <label class="input_chk"><input type="checkbox"><span>신발장 전도 안정성 시험</span></label>
+                  <div class="input_txt"><input type="text" value="24"> 개소</div>
+                </div>
+                <div class="td_form1_row">
+                  <label class="input_chk"><input type="checkbox"><span>욕실장 전도 안정성 시험</span></label>
+                  <div class="input_txt"><input type="text" value="4"> 개소</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>견적금액</th>
+              <td class="payment">
+                <strong>840,000</strong>원(VAT별도)
+              </td>
+            </tr>
+            <tr>
+              <th>고객 요구사항</th>
+              <td class="td_textarea">
+                <textarea cols="30" rows="10" style="width:100%; height:120px;"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <th>접수번호</th>
+              <td>
+                <input type="text" style="width: 195px;">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top: 50px;">
+        <div class="table_header">
+          <div class="pos_left">
+            <h4 class="table_title">세금계산서 발급 정보를 입력하세요.</h4>
+          </div>
+        </div>
+        <h5 class="table_title2">전자세금 계산서</h5>
+        <table class="table_form">
+          <colgroup>
+            <col style="width:180px;">
+            <col>
+            <col style="width:220px;">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>구분</th>
+              <td colspan="3" class="td_chk">
+                <label class="input_chk type2"><input type="checkbox"><span>의뢰자와 동일</span></label>
+              </td>
+            </tr>
+            <tr>
+              <th>회사명</th>
+              <td>
+                <input type="text" value="팜존에쓰엔씨" style="width:100%;">
+              </td>
+              <th>대표자명</th>
+              <td>
+                <input type="text" value="천승우" style="width:100%;">
+              </td>
+            </tr>
+            <tr>
+              <th>주소</th>
+              <td colspan="3">
+                <input type="text" value="01080" style="width:120px;">
+                <button class="btn_input">주소찾기</button>
+                <input type="text" value="서울특별시 강북구 수유로23가길 4 (수유동)" style="width:400px;">
+                <input type="text" value="1232" style="width:165px;">
+              </td>
+            </tr>
+            <tr>
+              <th>담당자</th>
+              <td colspan="3" class="td_form">
+                <span>성명: <input type="text" style="width: 130px;"></span>
+                <span>전화번호: <input type="text" style="width: 130px;"></span>
+                <span>Email: <input type="text" style="width: 250px;"></span>
+              </td>
+            </tr>
+            <tr>
+              <th>사업자 등록번호</th>
+              <td colspan="3">
+                <input type="text" style="width:130px;">
+                <input type="text" style="width:130px;">
+                <input type="text" style="width:228px;">
+              </td>
+            </tr>
+            <tr>
+              <th>사업자등록증 1부</th>
+              <td colspan="3" class="td_upload">
+                <div class="upload_btn">
+                  <div class="pos_left">
+                    <button type="button" class="btn_type2 color_type3">Upload Files</button>
+                  </div>
+                  <div class="pos_right">
+                    <button type="button" class="btn_type2 color_type2">전송중지</button>
+                    <button type="button" class="btn_type2 color_type1">선택삭제</button>
+                    <button type="button" class="btn_type2 color_type1">모두삭제</button>
+                  </div>
+                </div>
+                <div class="upload_box">
+                  <p>
+                    업로드 할 파일을
+                    <br>
+                    여기에 놓습니다.
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="btn_wrap btn_wrap_type3">
+        <button type="button" class="btn_type color_type2  arrw_prev">이전</button>
+        <button type="button" class="btn_type color_type3">접수완료</button>
+      </div>
+      
+    </div>
+
+@@include('./admin_footer.html')
+
+  </div>
+</body>
+</html>

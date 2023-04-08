@@ -13,23 +13,18 @@
 <body>
   <div class="admin_wrap">
 
-@@include('./admin_header.html', {cate: "cate6"})
+@@include('./admin_header.html', {cate: "cate1"})
 
     <div class="admin_container">
 
-      <h2 class="admin_page_title">입금관리</h2>
+      <h2 class="admin_page_title">사용자 관리</h2>
 
       <div class="admin_search">
         <div class="search_column">
           <select>
-            <option>접수번호</option>
-            <option>보고서번호</option>
-            <option>시험일자</option>
-            <option>의뢰자</option>
-            <option>세금계산서 발생업체</option>
-            <option>현장명</option>
-            <option>진행상태</option>
-            <option>진행됨</option>
+            <option>아이디</option>
+            <option>팀</option>
+            <option>성명</option>
           </select>
         </div>
         <div class="search_column">
@@ -40,118 +35,47 @@
         </div>
       </div>
 
-      <div class="admin_table_header">
-        <div class="pos_right">
-          <button type="button" class="btn_admin color_type2"><span>엑셀다운</span></button>
+      <div class="table_header">
+        <div class="pos_left">
+          <button type="button" class="btn_admin color_type2"><span>사용자추가</span></button>
+          <button type="button" class="btn_admin color_type2"><span>사용</span></button>
+          <button type="button" class="btn_admin color_type2"><span>중단</span></button>
         </div>
       </div>
-      <div class="admin_table_list">
+      <div class="table_list2">
         <table>
           <thead>
             <tr>
+              <th><label class="input_chk type2 typeOne"><input type="checkbox"><span>선택</span></label></th>
               <th>순번</th>
-              <th>접수번호</th>
-              <th>보고서 번호</th>
-              <th>접수일자</th>
-              <th>시험일자</th>
-              <th>의뢰자</th>
-              <th>세금계산서<br> 발행업체</th>
-              <th>구분</th>
-              <th>현장명</th>
-              <th>시험항목</th>
-              <th>개소</th>
-              <th>공급가액</th>
-              <th>VAT포함</th>
-              <th>보고서<br> 작성일</th>
-              <th>보고서 업로드</th>
-              <th>계산서 발행일</th>
-              <th>입금일</th>
-              <th>보고서 발송일</th>
-              <th>진행상태</th>
-              <th>담당팀</th>
+              <th>아이디</th>
+              <th>비밀번호</th>
+              <th>성명</th>
+              <th>팀</th>
+              <th>Email</th>
+              <th>상태</th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <td><label class="input_chk type2 typeOne"><input type="checkbox"><span>선택</span></label></td>
               <td>1</td>
-              <td>2303-001</td>
+              <td>Admin</td>
               <td>R2303-001</td>
-              <td>23.03.01</td>
-              <td>23.03.15</td>
-              <td>두산중공</td>
-              <td>두산중공</td>
-              <td>LH</td>
-              <td>완주상봉 A-2BL 2공구</td>
-              <td>전도안정성 시험</td>
-              <td>3</td>
-              <td>120,000</td>
-              <td>122,000</td>
-              <td>23.03.16</td>
-              <td>
-                <div class="btn">
-                  <button type="button" class="btn_file">업로드</button>
-                  <button type="button" class="btn_del">삭제</button>
-                </div>
-              </td>
-              <td><button type="button" class="btn_cal">23.03.16</button></td>
-              <td><button type="button" class="btn_cal">23.03.17</button></td>
-              <td><button type="button" class="btn_cal">23.03.17</button></td>
-              <td>최종완료</td>
-              <td>B팀</td>
+              <td>홍길동</td>
+              <td>B</td>
+              <td>admin@naver.com</td>
+              <td>사용중</td>
             </tr>
             <tr>
+              <td><label class="input_chk type2 typeOne"><input type="checkbox"><span>선택</span></label></td>
               <td>2</td>
-              <td>2303-001</td>
+              <td>Admin</td>
               <td>R2303-001</td>
-              <td>23.03.01</td>
-              <td>23.03.15</td>
-              <td>두산중공</td>
-              <td>두산중공</td>
-              <td>LH</td>
-              <td>완주상봉 A-2BL 2공구</td>
-              <td>전도안정성 시험</td>
-              <td>3</td>
-              <td>120,000</td>
-              <td>122,000</td>
-              <td>23.03.16</td>
-              <td>
-                <div class="btn">
-                  <button type="button" class="btn_file">다운로드</button>
-                  <button type="button" class="btn_del">삭제</button>
-                </div>
-              </td>
-              <td><button type="button" class="btn_cal">23.03.16</button></td>
-              <td><button type="button" class="btn_cal">23.03.17</button></td>
-              <td><button type="button" class="btn_cal">23.03.17</button></td>
-              <td>최종완료</td>
-              <td>B팀</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>2303-001</td>
-              <td>R2303-001</td>
-              <td>23.03.01</td>
-              <td>23.03.15</td>
-              <td>두산중공</td>
-              <td>두산중공</td>
-              <td>LH</td>
-              <td>완주상봉 A-2BL 2공구</td>
-              <td>전도안정성 시험</td>
-              <td>3</td>
-              <td>120,000</td>
-              <td>122,000</td>
-              <td>23.03.16</td>
-              <td>
-                <div class="btn">
-                  <button type="button" class="btn_file">업로드</button>
-                  <button type="button" class="btn_del">삭제</button>
-                </div>
-              </td>
-              <td><button type="button" class="btn_cal">23.03.16</button></td>
-              <td><button type="button" class="btn_cal">23.03.17</button></td>
-              <td><button type="button" class="btn_cal">23.03.17</button></td>
-              <td>최종완료</td>
-              <td>B팀</td>
+              <td>홍길동</td>
+              <td>B</td>
+              <td>admin@naver.com</td>
+              <td>사용중</td>
             </tr>
           </tbody>
         </table>
@@ -176,6 +100,48 @@
         <button type="button" class="btn_nav btn_nav_end">끝</button>
       </div>
 
+      <table class="table_form">
+        <colgroup>
+          <col style="width:180px;">
+          <col>
+          <col style="width:180px;">
+          <col>
+        </colgroup>
+        <tr>
+          <th>아이디</th>
+          <td colspan="3">
+            <input type="text">
+            <button type="button" class="btn_input"><span>중복확인</span></button>
+          </td>
+        </tr>
+        <tr>
+          <th>비밀번호</th>
+          <td><input type="password" style="width: 100%;"></td>
+          <th>회사전화</th>
+          <td><input type="text" style="width: 100%;"></td>
+        </tr>
+        <tr>
+          <th>성명</th>
+          <td><input type="text" style="width: 100%;"></td>
+          <th>모바일</th>
+          <td><input type="text" style="width: 100%;"></td>
+        </tr>
+        <tr>
+          <th>팀</th>
+          <td>
+            <select style="width: 100%;">
+              <option value="">AF, A&lt;B&lt;C </option>
+            </select>
+          </td>
+          <th>이메일</th>
+          <td><input type="text" style="width: 100%;"></td>
+        </tr>
+      </table>
+      <div class="table_footer">
+        <div class="pos_right">
+          <button type="button" class="btn_admin color_type2"><span>저장하기</span></button>
+        </div>
+      </div>
     </div>
 
 @@include('./admin_footer.html')

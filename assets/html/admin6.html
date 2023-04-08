@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+  <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/ui.js"></script>
+</head>
+<body>
+  <div class="admin_wrap">
+
+@@include('./admin_header.html', {cate: "cate6"})
+
+    <div class="admin_container">
+
+      <h2 class="admin_page_title">입금관리</h2>
+
+      <div class="admin_search">
+        <div class="search_column">
+          <select>
+            <option>접수번호</option>
+            <option>보고서번호</option>
+            <option>시험일자</option>
+            <option>의뢰자</option>
+            <option>세금계산서 발생업체</option>
+            <option>현장명</option>
+            <option>진행상태</option>
+            <option>진행됨</option>
+          </select>
+        </div>
+        <div class="search_column">
+          <input type="text">
+        </div>
+        <div class="search_column">
+          <button type="button" class="btn_admin color_type1"><span>조회</span></button>
+        </div>
+      </div>
+
+      <div class="table_header">
+        <div class="pos_right">
+          <button type="button" class="btn_admin color_type2"><span>엑셀다운</span></button>
+        </div>
+      </div>
+      <div class="table_list2">
+        <table>
+          <thead>
+            <tr>
+              <th>순번</th>
+              <th>접수번호</th>
+              <th>보고서 번호</th>
+              <th>접수일자</th>
+              <th>시험일자</th>
+              <th>의뢰자</th>
+              <th>세금계산서<br> 발행업체</th>
+              <th>구분</th>
+              <th>현장명</th>
+              <th>시험항목</th>
+              <th>개소</th>
+              <th>공급가액</th>
+              <th>VAT포함</th>
+              <th>보고서<br> 작성일</th>
+              <th>보고서 업로드</th>
+              <th>계산서 발행일</th>
+              <th>입금일</th>
+              <th>보고서 발송일</th>
+              <th>진행상태</th>
+              <th>담당팀</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>2303-001</td>
+              <td>R2303-001</td>
+              <td>23.03.01</td>
+              <td>23.03.15</td>
+              <td>두산중공</td>
+              <td>두산중공</td>
+              <td>LH</td>
+              <td>완주상봉 A-2BL 2공구</td>
+              <td>전도안정성 시험</td>
+              <td>3</td>
+              <td>120,000</td>
+              <td>122,000</td>
+              <td>23.03.16</td>
+              <td>
+                <div class="btn">
+                  <button type="button" class="btn_file">업로드</button>
+                  <button type="button" class="btn_del">삭제</button>
+                </div>
+              </td>
+              <td><button type="button" class="btn_cal">23.03.16</button></td>
+              <td><button type="button" class="btn_cal">23.03.17</button></td>
+              <td><button type="button" class="btn_cal">23.03.17</button></td>
+              <td>최종완료</td>
+              <td>B팀</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>2303-001</td>
+              <td>R2303-001</td>
+              <td>23.03.01</td>
+              <td>23.03.15</td>
+              <td>두산중공</td>
+              <td>두산중공</td>
+              <td>LH</td>
+              <td>완주상봉 A-2BL 2공구</td>
+              <td>전도안정성 시험</td>
+              <td>3</td>
+              <td>120,000</td>
+              <td>122,000</td>
+              <td>23.03.16</td>
+              <td>
+                <div class="btn">
+                  <button type="button" class="btn_file">다운로드</button>
+                  <button type="button" class="btn_del">삭제</button>
+                </div>
+              </td>
+              <td><button type="button" class="btn_cal">23.03.16</button></td>
+              <td><button type="button" class="btn_cal">23.03.17</button></td>
+              <td><button type="button" class="btn_cal">23.03.17</button></td>
+              <td>최종완료</td>
+              <td>B팀</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>2303-001</td>
+              <td>R2303-001</td>
+              <td>23.03.01</td>
+              <td>23.03.15</td>
+              <td>두산중공</td>
+              <td>두산중공</td>
+              <td>LH</td>
+              <td>완주상봉 A-2BL 2공구</td>
+              <td>전도안정성 시험</td>
+              <td>3</td>
+              <td>120,000</td>
+              <td>122,000</td>
+              <td>23.03.16</td>
+              <td>
+                <div class="btn">
+                  <button type="button" class="btn_file">업로드</button>
+                  <button type="button" class="btn_del">삭제</button>
+                </div>
+              </td>
+              <td><button type="button" class="btn_cal">23.03.16</button></td>
+              <td><button type="button" class="btn_cal">23.03.17</button></td>
+              <td><button type="button" class="btn_cal">23.03.17</button></td>
+              <td>최종완료</td>
+              <td>B팀</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="paging">
+        <button type="button" class="btn_nav btn_nav_start" disabled>처음</button>
+        <button type="button" class="btn_nav btn_nav_prev" disabled>이전</button>
+        <div class="paging_number">
+          <button type="button" disabled>1</button>
+          <button type="button">2</button>
+          <button type="button">3</button>
+          <button type="button">4</button>
+          <button type="button">5</button>
+          <button type="button">6</button>
+          <button type="button">7</button>
+          <button type="button">8</button>
+          <button type="button">9</button>
+          <button type="button">10</button>
+        </div>
+        <button type="button" class="btn_nav btn_nav_next">다음</button>
+        <button type="button" class="btn_nav btn_nav_end">끝</button>
+      </div>
+
+    </div>
+
+@@include('./admin_footer.html')
+
+  </div>
+</body>
+</html>
