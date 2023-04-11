@@ -255,7 +255,9 @@ pre {white-space: pre-line;}
   > tbody > tr.bg > td,
   > tbody > tr.bg + tr.bg > td {background: #fcfcfa;}
   > tbody > tr.bg > td {border-top: 1px solid #e3e3e3;}
-  > tbody > tr.bg + tr.bg td {border: 0; border-bottom: 1px solid #e3e3e3;}
+  > tbody > tr.bg + tr.bg > td {border: 0;}
+  > tbody > tr.bg + tr.bg + tr td {border-top: 1px solid #e3e3e3;}
+  > tbody > tr.isShow + tr {display: table-row !important;}
   .state1 {color: #4949e8;}
   .btn {
     padding: 2px 14px;
@@ -263,6 +265,12 @@ pre {white-space: pre-line;}
     font-size: 16px;
     color: #5f6ee2;
   }
+  .btn_toggle {
+    width: 30px; height: 30px;
+    background: url('../images/btn/btn_toggle.png') no-repeat;
+    font-size: 0;
+  }
+  .isShow .btn_toggle {transform: rotate(180deg);}
   td table {
     border: 1px solid #e3e3e3;
   }
@@ -940,6 +948,9 @@ pre {white-space: pre-line;}
 }
 
 .tab {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   margin: 0 0 22px;
   text-align: center;
@@ -1243,18 +1254,29 @@ pre {white-space: pre-line;}
     color: #868698;
   }
   .btn_nav {
-    width: 34px; height: 34px;
-    border: 1px solid #e0e9eb;
-    background-image: linear-gradient(to top, #f6f8f9, #fff);
-    font-size: 0;
-    &:after {
-      content: "";
-      display: block;
-      width: 100%; height: 100%;
-      background: url('../images/btn/btn_cal_month.png') no-repeat;
+    &:disabled {opacity: .5;}
+    i {
+      display: inline-block;
+      width: 34px; height: 34px;
+      border: 1px solid #e0e9eb;
+      background-image: linear-gradient(to top, #f6f8f9, #fff);
+      vertical-align: -11px;
+      box-sizing: border-box;
     }
   }
-  .btn_nav_next:after {
+  .btn_nav_prev i {margin-right: 10px;}
+  .btn_nav_prev i:before {
+    content: "";
+    display: inline-block;
+    width: 100%; height: 100%;
+    background: url('../images/btn/btn_cal_month.png') no-repeat;
+  }
+  .btn_nav_next i {margin-left: 10px;}
+  .btn_nav_next i:after {
+    content: "";
+    display: inline-block;
+    width: 100%; height: 100%;
+    background: url('../images/btn/btn_cal_month.png') no-repeat;
     transform: rotate(180deg);
   }
 }
@@ -1298,12 +1320,19 @@ pre {white-space: pre-line;}
     flex-wrap: wrap;
   }
   &_date .item {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 14.2%; min-height: 122px;
     padding: 30px 6px 0;
+    &.isSelected:before {
+      content: "";
+      position: absolute;
+      top: -1px; right: -1px; bottom: -1px; left: -1px;
+      border: 1px solid #7950ff;
+    }
   }
   &_date .sun {
     width: 14.8%;
@@ -1376,14 +1405,13 @@ pre {white-space: pre-line;}
   }
 }
 
-.detail_box {
+.layer_pop {
   display: none;
   flex-direction: column;
   position: fixed;
   top: 0; left: -100vh;
   z-index: 100;
   background: #fff;
-  width: 355px; height: 361px;
   border: solid 2px #ececec;
   box-sizing: border-box;
   &.isShow {display: flex;}
@@ -1397,26 +1425,31 @@ pre {white-space: pre-line;}
     border-bottom: 2px solid #ececec;
   }
   &_input {
-    flex: 1;
-    padding: 0 20px;
-    .row {
-      display: flex;
-      align-items: center;
-      margin-top: 11px;
-    }
-    .tit {
-      width: 80px;
+    padding: 6px 20px;
+    th {
       font-size: 17px;
+      font-weight: 500;
       color: #4a4a4c;
+      text-align: left;
+      ~ th {
+        padding-left: 30px;
+      }
     }
-    .cont {
-      flex: 1;
+    td {
+      padding: 5px 0;
       input, select {
         width: 100%; height: 39px;
         font-size: 17px;
         color: #4a4a4c;
         border: 1px solid #cfcfcf;
       }
+    }
+    .btn_input {
+      height: 39px;
+      margin-left: -4px;
+      padding: 0 10px;
+      background: #898989;
+      color: #fff;
     }
   }
   .btn_wrap {

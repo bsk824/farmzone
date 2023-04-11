@@ -72,12 +72,13 @@
             <col style="width: 45px;">
             <col style="width: 115px;">
             <col style="width: 60px;">
-            <col style="width: 115px;">
-            <col style="width: 115px;">
-            <col style="width: 85px;">
+            <col style="width: 100px;">
+            <col style="width: 100px;">
+            <col style="width: 80px;">
             <col>
+            <col style="width: 110px;">
             <col style="width: 95px;">
-            <col style="width: 125px;">
+            <col style="width: 50px;">
           </colgroup>
           <thead>
             <tr>
@@ -88,8 +89,8 @@
               <th>시험일자</th>
               <th>의뢰자</th>
               <th>현장명</th>
-              <th>진행상태</th>
               <th>거래명세서</th>
+              <th colspan="2">진행상태</th>
             </tr>
           </thead>
           <tbody>
@@ -101,11 +102,12 @@
               <td>2023.03.04</td>
               <td>이종철</td>
               <td>완주상봉 A-2BL 2공구</td>
-              <td class="state1">최종완료</td>
               <td><button class="btn">보기</button></td>
+              <td class="state1">최종완료</td>
+              <td><button class="btn_toggle" onclick="toggleTr(this);">상세</button></td>
             </tr>
-            <tr>
-              <td colspan="9">
+            <tr style="display: none;">
+              <td colspan="10">
                 <table>
                   <colgroup>
                     <col style="width: 123px;">
@@ -150,11 +152,12 @@
               <td>2023.03.04</td>
               <td>이종철</td>
               <td>완주상봉 A-2BL 2공구</td>
-              <td class="state1">접수완료</td>
               <td><button class="btn">보기</button></td>
+              <td class="state1">접수완료</td>
+              <td><button class="btn_toggle" onclick="toggleTr(this);">상세</button></td>
             </tr>
-            <tr class="bg">
-              <td colspan="9">
+            <tr class="bg" style="display: none;">
+              <td colspan="10">
                 <table>
                   <colgroup>
                     <col style="width: 123px;">
@@ -199,11 +202,12 @@
               <td>2023.03.04</td>
               <td>이종철</td>
               <td>완주상봉 A-2BL 2공구</td>
-              <td class="state1">접수완료</td>
               <td><button class="btn">보기</button></td>
+              <td class="state1">접수완료</td>
+              <td><button class="btn_toggle" onclick="toggleTr(this);">상세</button></td>
             </tr>
-            <tr>
-              <td colspan="9">
+            <tr style="display: none;">
+              <td colspan="10">
                 <table>
                   <colgroup>
                     <col style="width: 123px;">

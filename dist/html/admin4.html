@@ -38,11 +38,11 @@
 
       <div class="cal_wrap">
         <div class="cal_nav">
-          <button type="button" class="btn_nav btn_nav_prev">이전달</button>
+          <button type="button" class="btn_nav btn_nav_prev" disabled><i></i>이전달</button>
           <p class="cal_month">
             <span class="month">2023.4</span>
           </p>
-          <button type="button" class="btn_nav btn_nav_next">다음달</button>
+          <button type="button" class="btn_nav btn_nav_next">다음달<i></i></button>
         </div>
         <div class="cal_body">
           <div class="cal_body_day">
@@ -126,35 +126,44 @@
         </div>
       </div>
 
-      <div class="detail_box">
-        <p class="detail_box_tit">배정관리 상세</p>
-        <div class="detail_box_input">
-          <label class="row">
-            <div class="tit">현장명</div>
-            <div class="cont"><input type="text" value="현장명"></div>
-          </label>
-          <label class="row">
-            <div class="tit">민영현장</div>
-            <div class="cont"><input type="text" value="경기도 안양시 평촌동 144-56"></div>
-          </label>
-          <label class="row">
-            <div class="tit">현장방문</div>
-            <div class="cont">
-              <select>
-                <option value="">A팀, B팀, C팀</option>
-              </select>
-            </div>
-          </label>
-          <label class="row">
-            <div class="tit">시험일자</div>
-            <div class="cont"><input type="text" class="input_cal"></div>
-          </label>
+      <div class="layer_pop" id="detailBox" style="width: 355px;">
+        <p class="layer_pop_tit">배정관리 상세</p>
+        <div class="layer_pop_input">
+          <table>
+            <colgroup>
+              <col style="width: 80px">
+              <col>
+            </colgroup>
+            <tr>
+              <th>현장명</th>
+              <td><input type="text" value="현장명"></td>
+            </tr>
+            <tr>
+              <th>민영현장</th>
+              <td><input type="text" value="경기도 안양시 평촌동 144-56"></td>
+            </tr>
+            <tr>
+              <th>현장방문</th>
+              <td>
+                <select>
+                  <option value="">A팀, B팀, C팀</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>시험일자</th>
+              <td>
+                <input type="text" class="input_cal">
+              </td>
+            </tr>
+          </table>
         </div>
         <div class="btn_wrap">
           <button type="button" class="btn_type color_type1">저장</button>
-          <button type="button" class="btn_type color_type2" onclick="dragItem.detailHide()">닫기</button>
+          <button type="button" class="btn_type color_type2" onclick="layerClose('#detailBox')">닫기</button>
         </div>
       </div>
+
     </div>
 
     <footer class="admin_footer">

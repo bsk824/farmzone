@@ -37,7 +37,7 @@
 
       <div class="table_header">
         <div class="pos_left">
-          <button type="button" class="btn_admin color_type2"><span>사용자추가</span></button>
+          <button type="button" class="btn_admin color_type2" onclick="layerOpen('#userAddPop', this)"><span>사용자추가</span></button>
           <button type="button" class="btn_admin color_type2"><span>사용</span></button>
           <button type="button" class="btn_admin color_type2"><span>중단</span></button>
         </div>
@@ -99,48 +99,53 @@
         <button type="button" class="btn_nav btn_nav_next">다음</button>
         <button type="button" class="btn_nav btn_nav_end">끝</button>
       </div>
+      
+    </div>
 
-      <table class="table_form">
-        <colgroup>
-          <col style="width:180px;">
-          <col>
-          <col style="width:180px;">
-          <col>
-        </colgroup>
-        <tr>
-          <th>아이디</th>
-          <td colspan="3">
-            <input type="text">
-            <button type="button" class="btn_input"><span>중복확인</span></button>
-          </td>
-        </tr>
-        <tr>
-          <th>비밀번호</th>
-          <td><input type="password" style="width: 100%;"></td>
-          <th>회사전화</th>
-          <td><input type="text" style="width: 100%;"></td>
-        </tr>
-        <tr>
-          <th>성명</th>
-          <td><input type="text" style="width: 100%;"></td>
-          <th>모바일</th>
-          <td><input type="text" style="width: 100%;"></td>
-        </tr>
-        <tr>
-          <th>팀</th>
-          <td>
-            <select style="width: 100%;">
-              <option value="">AF, A&lt;B&lt;C </option>
-            </select>
-          </td>
-          <th>이메일</th>
-          <td><input type="text" style="width: 100%;"></td>
-        </tr>
-      </table>
-      <div class="table_footer">
-        <div class="pos_right">
-          <button type="button" class="btn_admin color_type2"><span>저장하기</span></button>
-        </div>
+    <div class="layer_pop" id="userAddPop" style="width: 690px;">
+      <p class="layer_pop_tit">사용자 추가</p>
+      <div class="layer_pop_input">
+        <table>
+          <colgroup>
+            <col style="width:80px;">
+            <col>
+            <col style="width:120px;">
+            <col>
+          </colgroup>
+          <tr>
+            <th>아이디</th>
+            <td colspan="3">
+              <input type="text" style="width: 225px;">
+              <button type="button" class="btn_input"><span>중복확인</span></button>
+            </td>
+          </tr>
+          <tr>
+            <th>비밀번호</th>
+            <td><input type="password" style="width: 100%;"></td>
+            <th>회사전화</th>
+            <td><input type="text" style="width: 100%;"></td>
+          </tr>
+          <tr>
+            <th>성명</th>
+            <td><input type="text" style="width: 100%;"></td>
+            <th>모바일</th>
+            <td><input type="text" style="width: 100%;"></td>
+          </tr>
+          <tr>
+            <th>팀</th>
+            <td>
+              <select style="width: 100%;">
+                <option value="">AF, A&lt;B&lt;C </option>
+              </select>
+            </td>
+            <th>이메일</th>
+            <td><input type="text" style="width: 100%;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="btn_wrap">
+        <button type="button" class="btn_type color_type1">저장</button>
+        <button type="button" class="btn_type color_type2" onclick="layerClose('#userAddPop')">닫기</button>
       </div>
     </div>
 
