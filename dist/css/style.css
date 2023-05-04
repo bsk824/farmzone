@@ -397,6 +397,48 @@ pre {
   background: url("../images/icon/icon_file2.png") no-repeat;
   font-size: 0;
 }
+.table_list .contact {
+  position: relative;
+  padding: 0 44px;
+  background: #d9dcf5;
+  text-align: left;
+}
+.table_list .contact:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 22px;
+  margin-top: -6px;
+  width: 8px;
+  height: 8px;
+  border: solid #000;
+  border-width: 0 0 2px 2px;
+}
+.table_list .contact span {
+  display: inline-block;
+}
+.table_list .contact .item ~ .item {
+  margin-left: 60px;
+}
+.table_list .contact .key {
+  color: #4a4a4c;
+}
+.table_list .contact .val {
+  position: relative;
+  margin-left: 6px;
+  padding-left: 12px;
+  color: #5858c3;
+}
+.table_list .contact .val:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -7px;
+  width: 2px;
+  height: 16px;
+  background: #797a82;
+}
 
 .table_list2 {
   overflow-y: hidden;
@@ -1354,17 +1396,33 @@ pre {
   color: #343539;
 }
 .complete_price_box {
+  position: relative;
+  padding: 36px 0;
   margin-top: 45px;
   background: #f9f8fd;
   border: 1px solid #c9c8cb;
 }
-.complete_price_txt {
-  height: 132px;
-  padding-top: 30px;
+.complete_price_box:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   border: 6px solid #edeaf7;
+}
+.complete_price_txt {
+  position: relative;
+  z-index: 2;
   color: #343539;
   font-size: 20px;
   box-sizing: border-box;
+}
+.complete_price_txt2 {
+  position: relative;
+  z-index: 2;
+  opacity: 0.58;
+  margin-top: 20px;
 }
 .complete_price_value {
   color: #5f63d3;
@@ -1658,15 +1716,37 @@ pre {
 .print_wrap {
   width: 820px;
   margin: 0 auto;
-  padding: 70px 65px 0;
+  padding: 25px 65px 0;
   box-sizing: border-box;
 }
 .print_wrap h1 {
   margin: 0 0 35px;
+  padding-top: 45px;
   font-size: 32px;
   line-height: 1;
   letter-spacing: 3.2px;
   text-align: center;
+}
+.print_wrap__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.print_wrap .sign-table {
+  width: 276px;
+}
+.print_wrap .sign-table th, .print_wrap .sign-table td {
+  padding: 0;
+  border: 2px solid #7a7a7a;
+}
+.print_wrap .sign-table th {
+  height: 30px;
+  background: none;
+  font-size: 15px;
+}
+.print_wrap .sign-table td {
+  width: 66px;
+  height: 60px;
 }
 .print_wrap .table1 {
   border: 3px solid #e3e3e3;

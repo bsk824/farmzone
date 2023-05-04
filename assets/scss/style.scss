@@ -287,6 +287,42 @@ pre {white-space: pre-line;}
     background: url('../images/icon/icon_file2.png') no-repeat;
     font-size: 0;
   }
+  .contact {
+    position: relative;
+    padding: 0 44px;
+    background: #d9dcf5;
+    text-align: left;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%; left: 22px;
+      margin-top: -6px;
+      width: 8px; height: 8px;
+      border: solid #000;
+      border-width: 0 0 2px 2px;
+    }
+    span {
+      display: inline-block;
+    }
+    .item ~ .item {
+      margin-left: 60px;
+    }
+    .key {color: #4a4a4c;}
+    .val {
+      position: relative;
+      margin-left: 6px;
+      padding-left: 12px;
+      color: #5858c3;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%; left: 0;
+        margin-top: -7px;
+        width: 2px; height: 16px;
+        background: #797a82;
+      }
+    }
+  }
 }
 .table_list2 {
   overflow-y: hidden;
@@ -1182,17 +1218,30 @@ pre {white-space: pre-line;}
     color: #343539;
   }
   &_price_box {
+    position: relative;
+    padding: 36px 0;
     margin-top: 45px;
     background: #f9f8fd;
     border: 1px solid #c9c8cb;
+    &:after {
+      content:"";
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      border: 6px solid #edeaf7;
+    }
   }
   &_price_txt {
-    height: 132px;
-    padding-top: 30px;
-    border: 6px solid #edeaf7;
+    position: relative;
+    z-index: 2;
     color: #343539;
     font-size: 20px;
     box-sizing: border-box;
+  }
+  &_price_txt2 {
+    position: relative;
+    z-index: 2;
+    opacity: .58;
+    margin-top: 20px;
   }
   &_price_value {
     color: #5f63d3;
@@ -1467,14 +1516,33 @@ pre {white-space: pre-line;}
 .print_wrap {
   width: 820px;
   margin: 0 auto;
-  padding: 70px 65px 0;
+  padding: 25px 65px 0;
   box-sizing: border-box;
   h1 {
     margin: 0 0 35px;
+    padding-top: 45px;
     font-size: 32px;
     line-height: 1;
     letter-spacing: 3.2px;
     text-align: center;
+  }
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .sign-table {
+    width: 276px;
+    th, td {
+      padding: 0;
+      border: 2px solid #7a7a7a;
+    }
+    th {
+      height: 30px;
+      background: none;
+      font-size: 15px;
+    }
+    td {width: 66px; height: 60px;}
   }
   .table1 {
     border: 3px solid #e3e3e3;
